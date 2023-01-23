@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}  
+body{
+    background-color: #09090A;  
+    height: 100vh;
+    color: #FFF;
+}
+header{ 
+    position: fixed; /*propriedade fixa o header*/
+    width: 100%; /*esta ocupando 100% da largura*/
+    
+    /*Alinhando itens dentro da caixa header*/
+    display: flex;  
+    align-items: center; /*Alinhando os elementos ao meio do tamanho da caixa header*/
+    justify-content: space-between;
+    padding: 48px;
+}
+button{
+    padding: 16px 24px;
+    background-color: transparent;
+    color: #FFF;
+    border: 1px solid #8B5CF6;
+    border-radius: 8px;
+  
+    /*Alinhamento interno do elemento*/
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espaço entre os elementos da caixa button*/
+  
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+form{
+    display: flex;
+    padding: 182px 48px 48px; /*em cima || laterais || embaixo*/
+    width: fit-content; /*Adicona uma espaço ao final do width para ter  um respiro*/
+}
+.habits{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 60px;
+}
+.habit{
+    width: 64px;
+    height: 64px;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.days{
+    display: flex;
+    margin-left: 32px;
+    gap: 48px;
+}
+.day{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.day div{
+    margin-bottom: 8px;
+    font-family: 'Roboto Mono';
+    font-size: 20px;
+    line-height: 125%;
+    text-align: center;
+}
+input{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    background-color: #18181B;
+    border: 1px solid #27272A;
+}
+input:checked{
+    background-color: #8B5CF6;
+    border: 1px solid #A78BFA;
+}
+
+@media (max-width: 570px){
+    button div{
+        display: none;
+    }
+}
